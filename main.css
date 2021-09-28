@@ -1,0 +1,58 @@
+*{
+    padding: 0;
+    margin: 0; 
+    scroll-behavior: smooth;
+    color: white;
+    font-size: 18px;
+}
+
+.box{
+    display: grid; 
+    grid-template-columns: 50% 1fr;
+    grid-template-rows: 15vh 50vh;
+    grid-template-areas: 
+    "header ."
+    "sidebar main";
+    background-color: rgb(1, 1, 14);
+}
+
+
+.kein-schutz{
+    grid-area: header;
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    background-color: rgb(1, 1, 14);
+    color: white;
+    font-size: 5vw 
+}
+
+
+.form{
+    display: grid; 
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    text-align: center;
+    align-items: center;
+    margin: 2.5%;
+    grid-area: sidebar;
+    background-color: grey;
+}
+
+.form-example{
+    display: grid;
+    grid-template-columns: 15% 45% 2% 5%;
+    grid-template-rows: 1.5vw;
+}
+
+.form-example input{
+    color: black
+}
+
+.output{
+    display: grid;
+    grid-template-columns: 20vh;
+    grid-template-rows: 1.5vw 1.5vw 1.5vw;
+    grid-area: main;
+}
+
