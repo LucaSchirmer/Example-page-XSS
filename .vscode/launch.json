@@ -5,10 +5,10 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "type": "pwa-chrome",
+            "type": "firefox",
             "request": "launch",
-            "name": "Launch Chrome against localhost",
-            "url": "http://127.0.0.1:5500",
+            "name": "Launch Firefox against localhost",
+            "url": "https://localhost/AA/Example-page-XSS/index.html",
             "webRoot": "${workspaceFolder}"
         }
     ]
