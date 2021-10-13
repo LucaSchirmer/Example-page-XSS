@@ -51,8 +51,12 @@
 
 .output{
     display: grid;
-    grid-template-columns: 20vh;
+    grid-template-columns: 1fr;
     grid-template-rows: 1.5vw 1.5vw 1.5vw;
     grid-area: main;
     margin: 2.5%;
+}
+
+.form-example {
+    margin: 1%;
 }

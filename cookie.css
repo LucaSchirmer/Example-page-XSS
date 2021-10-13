@@ -1,0 +1,118 @@
+*{
+    padding: 0;
+    margin: 0; 
+    scroll-behavior: smooth;
+    font-size: 18px;
+}
+
+.hl1{
+    justify-self: center;
+    place-self: center;
+    font-size: 5rem;
+}
+
+.inhalt{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: minmax(15vh, 30vh) 3fr;
+}
+
+article{
+    text-align: center;
+    display: grid; 
+    grid-template-columns: 1fr  5fr  1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas:  ". a .";
+}
+
+.text{
+    grid-area: a; 
+}
+
+
+.KommentarForm{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: minmax(25vh, 40vh) minmax(25vh, 40vh);
+}
+
+.form-kommentar{
+    display: grid; 
+    grid-template-columns: 1fr 6fr 1fr;
+    grid-template-rows: minmax(5vh, 8vh) minmax(25vh, 45vh) minmax(2vh, 5vh);
+    grid-template-areas:  
+    ". a ."
+    ". b ."
+    ". c .";
+}
+
+.form-kommentar label{
+    grid-area: a; 
+}
+
+
+#Kommentar{
+    grid-area: b; 
+}
+
+#Go-Kommentar{
+    grid-area: c; 
+    justify-self: center;
+}
+
+.form-name{
+    display: grid; 
+    grid-template-columns: 1fr 6fr 1fr;
+    grid-template-rows: minmax(4vh, 6vh) minmax(7vh, 13vh) minmax(2vh, 5vh);
+    grid-template-areas:  
+    ". a ."
+    ". b ."
+    ". c .";
+}
+
+.form-name label{
+    grid-area: a; 
+}
+
+
+#Autor{
+    grid-area: b; 
+}
+
+#Go-Autor{
+    grid-area: c; 
+    justify-self: center;
+}
+
+label{
+    text-align: center;
+    place-self: center;
+    font-size: 3rem;
+}
+
+
+.kommentar-h1{
+    font-size: 4rem;    
+    place-self: center;
+    text-align: center;   
+}
+
+.kommentar{
+    text-align: center;   
+}
+
+.comment-section{
+    display: grid; 
+    place-self: center stretch;
+    grid-template-columns: 1fr 6fr 1fr;
+    grid-template-areas:  
+    ". a ."
+    ". b ."
+    ". c .";
+}
+
+.kommentar-div-grid{
+    border: 2px solid black;
+    grid-column-start: 2;
+    grid-column-end: 2;
+}
