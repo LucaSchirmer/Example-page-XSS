@@ -97,6 +97,8 @@
        $_send = $conn->prepare($sql);
        $_send->bind_param('ss',$_NAME_based, $_KOMMENTAR_based);
        $_send->execute();
+       unset($_POST["Autor"]);
+       unset($_POST["Kommentar"]);
        unset($_POST["submit"]);
      }         
      ?> 
